@@ -1,4 +1,4 @@
-im
+
 let SDtomb = [
     {
       "nev": "Maxi Ultra",
@@ -33,4 +33,20 @@ let SDtomb = [
       "meret": "64"
     }
   ]
+
+
+
+  document.addEventListener('DOMContentLoaded', () =>{
+
+    document.getElementById('search').addEventListener('input', ()=>{
+      let inputvalue = document.getElementById('search');
+      if(inputvalue.value.length >= 3) {
+        const keres = query => SDtomb.filter(s => s.includes(query));
+        console.log(keres(inputvalue.value));
+      }
+
+
+    });
+
+  });
   
